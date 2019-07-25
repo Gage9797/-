@@ -1,0 +1,58 @@
+<!--answer.wxml-->
+<view class="container">
+  <view class="question">
+    <text class="question-title">{{answer.question}}</text>
+  </view>
+  <view class="answerer-wrp">
+    <view class="bg-half"></view>
+    <view class="answerer flex-wrp">
+      <view class="avatar flex-item">
+        <image src="{{answer.feed_source_img}}"></image>
+      </view>
+      <view class="answerer-info flex-item">
+        <text class="answerer-name">{{answer.feed_source_name}}</text>
+        <text class="answerer-des">WEB前端*不靠谱天气预报员*想做代码小仙女</text>
+      </view>
+      <view class="follow flex-item">
+        <text>十 关注</text>
+      </view>
+    </view>
+  </view>
+  <view class="answer-content">
+    <text>
+        {{answer.answer_ctnt}}
+        </text>
+    <image src="../../images/1444983318907-_DSC1826.jpg"></image>
+  </view>
+
+  <view class="answer-footer flex-wrp">
+    <view class="good flex-item">
+      <view class="good-bad">
+        <image src="../../images/good-bad.png"></image>
+      </view>
+      <view class="good-num">2.1k</view>
+    </view>
+    <view class="operation-wrp flex-item">
+      <view class="operation flex-wrp flex-tab">
+        <view class="operation-btn flex-item" bindtap="onThanksTap">
+          <image wx:if="{{answer.upStatus}}" src="../../images/wx_app_liked.png"></image>
+          <image wx:else src="../../images/wx_app_like.png"></image>
+          <text>{{answer.upNum}}</text>
+        </view>
+        <view class="operation-btn flex-item" bindtap="OnCollectionTap">
+            <image wx:if="{{answer.collect}}" src="../../images/star.png"></image>
+            <image wx:else src="../../images/star2.png"></image>
+          <text>收藏</text>
+        </view>
+        <view class="operation-btn flex-item" bindtap="onCommentTap">
+          <image src="../../images/comment.png"></image>
+          <text>302</text>
+        </view>
+
+      </view>
+    </view>
+
+
+
+  </view>
+</view>
